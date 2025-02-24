@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Color Palette Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Add this to center everything */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Accessible Color Palette Generator</h1>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Why Color Contrast Matters</h2>
+            <p>Color contrast is an essential aspect of web accessibility. It ensures that users with visual impairments, including color blindness, can easily read and navigate your website. A good color contrast also improves the overall user experience for everyone.</p>
+            <h2>Understanding WCAG Grading</h2>
+            <p>The Web Content Accessibility Guidelines (WCAG) provide a set of guidelines for making web content more accessible. The WCAG grading system evaluates the contrast between two colors based on their luminance and color difference. The grades are:</p>
+            <ul>
+                <li>AAA: Excellent contrast, suitable for most users</li>
+                <li>AA: Good contrast, suitable for most users with visual impairments</li>
+                <li>A: Fair contrast, suitable for users with some visual impairments</li>
+                <li>Fail: Poor contrast, not suitable for users with visual impairments</li>
+            </ul>
+            <button id="go-to-checker">Check Your Color Contrast</button>
+        </section>
+    </main>
+    <script>
+      document.getElementById('go-to-checker').addEventListener('click', () => {
+        window.location.href = 'color-contrast-checker.html';
+      });
+    </script>
+</body>
+</html>

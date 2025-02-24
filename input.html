@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Color Palette Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this to center everything */
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f2f2f2; /* Light gray background */
+        }
+        header {
+          background-color: #007bff; /* Blue background */
+          color: #ffffff; /* White text */
+          padding: 1em;
+          text-align: center;
+          width: 100%;
+        }
+        main {
+          text-align: center;
+          margin-top: 3em;
+        }
+        .color-preview {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        .color {
+          width: 40px;
+          height: 40px;
+          border: 1px solid #000;
+          margin: 10px;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>WCAG Color Palette Checker</h1>
+    </header>
+    <main>
+        <section id="color-inputs">
+            <label for="color1">Color 1:</label>
+            <input type="color" id="color1" name="color1">
+            <label for="color2">Color 2:</label>
+            <input type="color" id="color2" name="color2">
+            <button id="generate">Generate Palette</button>
+            <div class="color-preview">
+                <div class="color" id="color-preview-1"></div>
+                <div class="color" id="color-preview-2"></div>
+            </div>
+        </section>
+        <section id="palette">
+            <!-- Generated palette will be displayed here -->
+            <div id="contrast-result">
+                <p id="contrast-ratio"></p>
+                <p id="wcag-grade"></p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
